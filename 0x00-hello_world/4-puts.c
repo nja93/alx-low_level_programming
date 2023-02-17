@@ -1,4 +1,4 @@
-#includes <stdio.h>
+#include <stdio.h>
 /**
 * main - Entry point prints a line of code with puts function
 *
