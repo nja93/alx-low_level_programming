@@ -8,10 +8,20 @@ int main(void)
 {
 	char c;
 
-		for (c = 'z'; c >= 'a'; c--)
+	int d;
 
+	c = 'a';
+	d = 0;
+	while
+		(d < 10) {
+			putchar(d + '0');
+			d++;
+		}
+	while
+		(c <= 'f') {
 			putchar(c);
-
-		putchar('\n');
-		return (0);
+			c++;
+		}
+	putchar('\n');
+	return (0);
 }
