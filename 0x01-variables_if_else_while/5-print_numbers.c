@@ -3,7 +3,7 @@
  * main - Entry point
  * Description: code that computes int of a between 0 and 10
  *
- * Return Always 0 (success)
+ * Return: Always 0 (success)
  */
 int main(void)
 {
