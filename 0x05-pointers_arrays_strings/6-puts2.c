@@ -2,11 +2,11 @@
 #include <string.h>
 
 /**
- * put2 - function that prints every other character of a string
+ * puts2 - function that prints every other character of a string
  * @str: str parameter
  */
 
-void put2(char *str)
+void puts2(char *str)
 {
 	int len, i;
 
