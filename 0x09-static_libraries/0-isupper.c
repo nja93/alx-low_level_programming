@@ -4,7 +4,7 @@
  *  * _isupper -Check if a letter is upper
  *   * @x: The numbber to be checked
  *    * Return: 1 for upper letter of 0 for any other
- *     */
+ */
 
 int _isupper(int x)
 {
