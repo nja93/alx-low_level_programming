@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
- * main _ Print the name of theprogram
+ * main - Print the name of theprogram
  * @argc: Count arguments
- * @arcgv: Arguments
+ * @argv: Arguments
  *
  *Return: Always 0 (Success)
  */
