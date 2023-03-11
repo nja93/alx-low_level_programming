@@ -1,15 +1,19 @@
 #include "main.h"
 
 /**
- * _puts - function that puts
- * @str: parameter to _puts funtion
+ *  * _puts - function declaration
+ *   * @str: string pointer
+ * Return: void
  */
+
 
 void _puts(char *str)
 {
-	for (; *str != '\0'; str++)
-	{
-		_putchar(*str);
-	}
-	_putchar('\n');
+	int index;
+
+	for (index = 0; *(str + index) != '\0'; index++)
+		{
+		_putchar(*(str + index));
+			}
+		_putchar('\n');
 }

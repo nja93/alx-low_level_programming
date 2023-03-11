@@ -1,13 +1,26 @@
 #include "main.h"
-#include <string.h>
 
 /**
- * _strlen - Computes the lenght of a character
- * @s: string pointer passed to this function
- * Return: returns the length of the string
+ *  * _strlen - function declaration
+ *   * Description: find length of a string
+ * @s: the string ptr
+ * Return: index
+ */
+
+int _strlen(char *s);
+
+/**
+ * _strlen - function definition
+ *   * Description: checks string length
+   * @s: the string pointer
+ *     * Return: index
  */
 
 int _strlen(char *s)
 {
-		return (strlen(s));
+	int index;
+
+	for (index = 0; s[index] != '\0'; index++)
+	{}
+	return (index);
 }
