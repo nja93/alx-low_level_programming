@@ -6,7 +6,7 @@
  * @argc: The number of arguments supplied to the program
  * @argv: An array of pointers to the arguments
  *
- * Return: Always 0
+ * Return: Always 0.
  */
 
 int main(int argc, char *argv[])
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	if (bytes < 0)
 	{
 		printf("Error\n");
-		exit(1);
+		exit(2);
 	}
 	for (index = 0; index < bytes; index++)
 	{
