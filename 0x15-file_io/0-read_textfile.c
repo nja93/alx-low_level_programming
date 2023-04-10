@@ -13,13 +13,13 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 
-	int chege, length, i, result;
+	int chege, let_length, result;
 	char *buffer;
 
 	if (filename == NULL)
 		return (0); /* check if file is NULL */
 
-	chege = open(filename, O_RDONLY)
+	chege = open(filename, O_RDONLY);
  /*open in read only*/
 	if (chege == -1)
 		return (0);
@@ -27,5 +27,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(char) * letters); /*allocate memory space for buffer*/
 	if (buffer == NULL)
 		return (0);
+
+	let_length = read(chege, buffer, letters);
+	if (let_length == -1)
+	{ return (0);
+	}
+
+	result = write(STDOUT_FILENO, buffer, let_length);
+	if (result != let_length)
+	{		return (0);
+	}
+	free(buffer);
+	close(chege);
+	return (let_length);
+}
 
 
