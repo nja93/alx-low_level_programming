@@ -32,7 +32,7 @@ int create_file(const char *filename, char *text_content)
 	length = strlen(text_content);
 
 	status = write(chege, text_content, length);
-	if (status != length)
+	if (status == -1 || status == -1)
 		return (-1);
 
 	status = close(chege);
