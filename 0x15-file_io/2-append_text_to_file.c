@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * append_text_to_file - function that appends text at the end of a file
  * @filename: is the name of the file
@@ -7,8 +8,7 @@
  * Do not create the file if it does not exist
  * If filename is NULL return -1
  * text_content is NULL, do not add anything to the file
- * Return 1 if the file exists, -1 if the file does not exist
- * or if you do not have the required permissions to write the file
+ * Return 1 if the file exists, -1 if the file does not exi
  * by chege
  */
 
@@ -19,18 +19,23 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 
-	if (text_content != NULL)
-	{
-		for (length = 0; text_content[length];)
-			length++;
-	}
-	chege = open(filename, O_WRONLY | O_APPEND);
-	w = write(chege, text_content, length);
-
-	if (chege == -1 || w == -1)
+	chege = open(filename, O_WRONLY | O_APPEND, 0661);
+	if (chege == -1)
 		return (-1);
 
-	close(chege)
+	if (!text_content)
+		return (-1);
+
+	length = strlen(text_content);
+
+	w = write(chege, text_content, length);
+
+	if (w == -1)
+		return (-1);
+
+	w = close(chege);
+	if (w == -1)
+		return (-1);
 
 	return (1);
 }
