@@ -1,3 +1,3 @@
 #include "main.h"
-char *create_buffer(char *file);
-void close_file(int fd);
+#define SIZE 1204 /*max size to ve read at a time*/
+
