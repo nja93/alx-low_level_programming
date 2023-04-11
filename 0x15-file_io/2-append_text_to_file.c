@@ -14,28 +14,25 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int chege, w, length = 0;
+	int chege, w, length;
 
 	if (filename == NULL)
 		return (-1);
 
-	chege = open(filename, O_WRONLY | O_APPEND);
+	if (text_content == NULL)
+		return (-1);
+
+	chege = open(filename, O_APPEND | O_WRONLY);
 	if (chege == -1)
 		return (-1);
 
-	if (!text_content)
-		return (-1);
-
-	length = strlen(text_content);
-
+	for (length = 0; text_content[length] != '\0'; length++)
+		;
 	w = write(chege, text_content, length);
 
 	if (w == -1)
 		return (-1);
 
-	w = close(chege);
-	if (w == -1)
-		return (-1);
-
+	close(chege);
 	return (1);
 }
