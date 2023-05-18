@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - fucntion that  adds a new node at the end of a dlistint_t list
+ * add_dnodeint_end - fn  adds new node at the end of a dlistint_t list
  * @head: pointer to pointer to the head of the node
  * @n: element to be added
  * by Lorna
