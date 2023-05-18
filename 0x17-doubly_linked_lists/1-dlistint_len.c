@@ -6,7 +6,6 @@
  * ny Lorna
  * Return: No. of elements in the list
  */
- 
 size_t dlistint_len(const dlistint_t *h)
 {
 	size_t i = 0;
@@ -14,7 +13,7 @@ size_t dlistint_len(const dlistint_t *h)
 	while (h != NULL)
 	{
 		i++;
-		h =h->next;
+		h = h->next;
 	}
 	return (i);
 }
