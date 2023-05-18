@@ -4,7 +4,7 @@
  * add_dnodeint - function tht adds node at the beginning
  * by Lorna
  * @n: element to be added
- *
+ * @head: pointer to the head node
  * Return: address of the new element or NULL if unsuccessful
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
