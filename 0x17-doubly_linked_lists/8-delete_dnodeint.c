@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * delete_dnodeint_at_index - Fn deletes the node @ given index in a lis 
+ * delete_dnodeint_at_index - Fn deletes the node @ given index in a lis
  * by Lorna
  * @head: Pointer to the address of the head node of the list.
  * @index: Index of the node to delete.
@@ -14,6 +14,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *position; /*position referes to current*/
 	unsigned int count = 0;
+
 	if (*head == NULL)
 		return (-1);
 
