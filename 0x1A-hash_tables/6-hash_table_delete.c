@@ -6,7 +6,7 @@
  */
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_table_t *head = ht;
+	hash_table_t *head_node = ht;
 	hash_node_t *current_node, *temp;
 	unsigned long int x;
 
@@ -21,7 +21,9 @@ void hash_table_delete(hash_table_t *ht)
 				free(current_node->key);
 				free(current_node->value);
 				free(current_node);
-				node = temp;
+				currnt_node = temp;
 			}
-		}
-	}}
+		}		}
+	free(head_node->array);
+	free(head_node);
+}
